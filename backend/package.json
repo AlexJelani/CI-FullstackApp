@@ -3,9 +3,10 @@
     "version": "1.0.0",
     "description": "Node.js backend for Uda-Craft app",
     "main": "app.js",
+    "type": "module",
     "scripts": {
         "start": "node app.js",
-        "test": "mocha test.js",
+        "test": "mocha --loader esm test.mjs",
         "lint": "eslint ."
     },
     "dependencies": {
