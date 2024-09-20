@@ -35,7 +35,7 @@ jobs:
       - name: Install dependencies
         run: |
           cd backend
-          npm install
+          npm outdated -l --json | jq -r 'keys[]' | xargs npm install --save
         continue-on-error: true
 
     
