@@ -1,18 +1,20 @@
-module.exports = {
-  env: {
-      browser: true,
-      es2021: true,
-  },
-  extends: [
-      'eslint:recommended',
-      'plugin:node/recommended',
-  ],
-  parserOptions: {
-      ecmaVersion: 12,
-      sourceType: 'module',
-  },
-  rules: {
-      // Place your custom rules here
-      'no-console': 'off',
-  },
-};
+import { defineConfig } from 'eslint-define-config';
+
+export default defineConfig({
+    parserOptions: {
+        ecmaVersion: 2021,
+        sourceType: 'module'
+    },
+    env: {
+        browser: true,
+        node: true,
+        es2021: true,
+    },
+    extends: [
+        'eslint:recommended',
+    ],
+    rules: {
+        // Your custom rules here
+    },
+});
+
