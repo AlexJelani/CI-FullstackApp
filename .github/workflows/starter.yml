@@ -39,11 +39,15 @@ jobs:
 
       # Run the tests.
       - name: Run the tests
-        run: npm test
+        run: |
+          cd backend  # Change this to the correct directory
+          npm test
 
       # Run the linter.
       - name: Run the linter
-        run:  npm run lint
+        run:  
+          cd backend  
+          npm run lint
 
       # Send a console message at completion.
       - name: Send a console message at completion.
