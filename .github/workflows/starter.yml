@@ -33,24 +33,18 @@ jobs:
 
       # Install the dependencies.
       - name: Install dependencies
-        run: |
-          cd backend
-          npm outdated -l --json | jq -r 'keys[]' | xargs npm install --save
+        run: cd backend && npm ci
         continue-on-error: true
 
     
 
       # Run the tests.
       - name: Run the tests
-        run: |
-          cd backend  # Change this to the correct directory
-          npm test
+        run: cd backend && npm test
 
         # Run the linter
       - name: Run linter
-        run: |
-          cd backend  
-          npm run lint
+        run: cd backend && npm run lint
         continue-on-error: true
 
 
