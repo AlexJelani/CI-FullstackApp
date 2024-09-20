@@ -40,7 +40,7 @@ jobs:
 
       # Run the tests.
       - name: Run the tests
-        run: cd backend && npm test test
+        run: cd backend && npm test 
 
         # Run the linter
       - name: Run linter
