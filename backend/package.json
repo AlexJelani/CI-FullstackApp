@@ -6,7 +6,7 @@
     "type": "module",
     "scripts": {
         "start": "node app.js",
-        "test": "mocha --loader esm test.mjs",
+        "test": "mocha --loader esm test.js",
         "lint": "eslint ."
     },
     "dependencies": {
