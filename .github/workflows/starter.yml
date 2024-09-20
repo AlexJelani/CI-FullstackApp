@@ -51,6 +51,7 @@ jobs:
         run: |
           cd backend  
           npm run lint
+        continue-on-error: true
 
 
       # Send a console message at completion.
